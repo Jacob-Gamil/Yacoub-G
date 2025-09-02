@@ -5,10 +5,10 @@ import { CiMenuBurger } from "react-icons/ci";
 import { MdOutlineClose } from "react-icons/md";
 
 const links = [
-  { linkName: "about", href: "/about" },
-  { linkName: "expertise", href: "/expertise" },
-  { linkName: "work", href: "/work" },
-  { linkName: "contact", href: "/about" },
+  { linkName: "about", href: "#about" },
+  { linkName: "expertise", href: "#expertise" },
+  { linkName: "work", href: "#work" },
+  { linkName: "contact", href: "#about" },
 ];
 
 function MainNav() {
@@ -29,8 +29,8 @@ function MainNav() {
           opacity: 1,
           x: 0,
           stagger: 0.2,
-          delay: 0.3,
-          ease: "power3.inOut",
+          delay: 0.2,
+          ease: "power2.out",
           duration: 0.5,
         }
       );
@@ -61,6 +61,7 @@ function MainNav() {
           {links.map((link, index) => (
             <a
               key={index}
+              onClick={() => setIsOpen((open) => !open)}
               className="menuLink text-white text-2xl capitalize hover:text-primary flex items-center gap-2"
               href={link.href}
             >

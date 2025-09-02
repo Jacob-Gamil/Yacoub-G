@@ -4,10 +4,10 @@ import { useRef } from "react";
 import { SlSocialGithub } from "react-icons/sl";
 
 const links = [
-  { linkName: "about", href: "/about" },
-  { linkName: "expertise", href: "/expertise" },
-  { linkName: "work", href: "/work" },
-  { linkName: "contact", href: "/about" },
+  { linkName: "about", href: "#about" },
+  { linkName: "expertise", href: "#expertise" },
+  { linkName: "work", href: "#work" },
+  { linkName: "contact", href: "#about" },
 ];
 
 function MainNav() {
@@ -32,7 +32,6 @@ function MainNav() {
         y: 0,
         stagger: 0.2,
         delay: 4,
-        duration: 0.1,
       }
     );
   }, []);

@@ -5,6 +5,8 @@ import Entrance from "./components/Entrance";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import HeroSection from "./components/HeroSection";
 import BothSides from "./components/BothSides";
+import AboutSection from "./components/AboutSection";
+import WorkWith from "./components/WorkWith";
 
 function App() {
   useGSAP(() => {
@@ -43,9 +45,9 @@ function App() {
       </div>
 
       {/* Main site content */}
-      <main className="">
+      <main id="main" className=" cursor-default ">
         {/* Email and quat  */}
-        <BothSides />
+        {/* <BothSides /> */}
 
         {/* Header  */}
         <div className="w-full fixed top-0 bg-[#0a192f] z-[60]">
@@ -55,6 +57,8 @@ function App() {
         {/* the main  */}
         <div className=" md:max-w-[70%] mx-auto mt-[6rem] p-4 ">
           <HeroSection />
+          <AboutSection />
+          <WorkWith />
         </div>
       </main>
     </>
