@@ -6,7 +6,7 @@ import MenuNav from "./MenuNav";
 function Header() {
   useGSAP(() => {}, []);
   return (
-    <div className=" max-w-[95%] lg:max-w-[90%] p-2 mx-auto flex items-center justify-between ">
+    <div className=" max-w-[95%] lg:max-w-[95%] p-2 mx-auto flex items-center justify-between ">
       <Logo />
 
       <div className=" md:hidden">

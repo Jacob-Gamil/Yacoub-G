@@ -1,6 +1,7 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import _ScrollTrigger, { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useRef } from "react";
 import { BiLogoTypescript } from "react-icons/bi";
 import { BsFillShieldLockFill } from "react-icons/bs";
 import { DiMongodb } from "react-icons/di";
@@ -12,6 +13,7 @@ import {
   FaReact,
   FaSquareGithub,
 } from "react-icons/fa6";
+import { MdArrowRight } from "react-icons/md";
 import {
   RiJavascriptFill,
   RiNextjsFill,
@@ -47,7 +49,11 @@ const programmingLanguages = [
 ];
 
 function WorkWith() {
+  gsap.registerPlugin(_ScrollTrigger);
+  const skillRef = useRef();
   useGSAP(() => {
+    const items = skillRef.current?.querySelectorAll(".skill");
+
     gsap.from("#work", {
       scrollTrigger: {
         trigger: "#work",
@@ -61,65 +67,52 @@ function WorkWith() {
       ease: "power2.out",
     });
 
-    gsap.from("#with", {
-      scrollTrigger: {
-        trigger: "#with",
-        start: "top 90%",
-        toggleActions: "play none none reverse",
+    gsap.fromTo(
+      items,
+      {
+        y: 50,
+        opacity: 0,
       },
-      x: 50,
-      y: 50,
-      opacity: 0,
-      duration: 0.5,
-      ease: "power2.out",
-    });
-
-    gsap.from("#skill", {
-      scrollTrigger: {
-        trigger: "#skill",
-        start: "top 100%",
-        toggleActions: "play none none reverse",
-      },
-      stagger: 0.1,
-      x: 50,
-      y: 50,
-      opacity: 0,
-      duration: 0.5,
-      ease: "power2.out",
-    });
+      {
+        scrollTrigger: {
+          trigger: items,
+          start: "top 100%",
+          toggleActions: "play none none reverse",
+        },
+        stagger: 0.05,
+        delay: 0,
+        y: 0,
+        opacity: 1,
+        ease: "back.inOut",
+      }
+    );
   }, []);
 
   return (
-    <div className="w-full">
-      <h2
+    <div className="w-full mt-4">
+      <h1
         id="work"
-        className="text-2xl md:text-3xl text-center font-bold flex justify-center items-center text-[#8892b0] capitalize"
+        className=" mb-2 text-[#ccd6f6] text-[1rem] font-semibold capitalize flex items-center"
       >
-        <span className="w-[10%] md:w-[20%] h-[1px] bg-primary block"></span>
-        As I work smoothly
-        <span className="w-[10%] md:w-[20%] h-[1px] bg-primary block"></span>
-      </h2>
-      <h3
-        id="with"
-        className="text-center text-2xl md:text-3xl font-bold text-primary w-full block"
-      >
-        With
-      </h3>
-      <div className="mt-[2rem] flex flex-col justify-center items-center">
-        <div
-          id="skill"
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 w-full"
-        >
-          {programmingLanguages.map((item, index) => (
-            <div
-              key={index}
-              className=" shadow-[0px_0px_2px_0px_#64ffda] p-2 font-bold uppercase flex items-center justify-evenly gap-4 hover:scale-105 duration-200 lg:last:col-span-3"
-            >
-              {item.name}
-              <span className="text-primary text-2xl">{item.icon}</span>
-            </div>
-          ))}
-        </div>
+        <span className=" w-1 h-1 rounded-full block bg-primary mx-2"></span>
+        I’ve been working{" "}
+        <span className=" text-primary mx-1.5">with recently:</span>
+      </h1>
+
+      <div ref={skillRef} className=" grid grid-cols-3 md:grid-cols-4">
+        {programmingLanguages.map((item) => (
+          <div key={item.name} className="skill relative mt-1">
+            <span className=" absolute top-1  flex items-center">
+              <MdArrowRight className=" text-primary" />
+            </span>
+            <h1 className=" text-[1rem] opacity-80 flex flex-col items-center">
+              <span className=" font-extralight text-[#ccd6f6]">
+                {item.name}
+              </span>
+              {/* <span>{item.icon}</span> */}
+            </h1>
+          </div>
+        ))}
       </div>
     </div>
   );

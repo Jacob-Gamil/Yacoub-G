@@ -2,11 +2,12 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Header from "./components/header/Header";
 import Entrance from "./components/Entrance";
-import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import HeroSection from "./components/HeroSection";
-import BothSides from "./components/BothSides";
 import AboutSection from "./components/AboutSection";
-import WorkWith from "./components/WorkWith";
+import Projects from "./components/projectSection/Projects";
+import BothSides from "./components/BothSides";
+import Contact from "./components/Contact";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   useGSAP(() => {
@@ -47,7 +48,7 @@ function App() {
       {/* Main site content */}
       <main id="main" className=" cursor-default ">
         {/* Email and quat  */}
-        {/* <BothSides /> */}
+        <BothSides />
 
         {/* Header  */}
         <div className="w-full fixed top-0 bg-[#0a192f] z-[60]">
@@ -55,11 +56,13 @@ function App() {
         </div>
 
         {/* the main  */}
-        <div className=" md:max-w-[70%] mx-auto mt-[6rem] p-4 ">
+        <div className=" max-w-[95%] md:max-w-[98%] lg:max-w-[85%] xl:max-w-[70%] mx-auto mt-[6rem]">
           <HeroSection />
           <AboutSection />
-          <WorkWith />
+          <Projects />
+          <Contact />
         </div>
+        <Toaster />
       </main>
     </>
   );

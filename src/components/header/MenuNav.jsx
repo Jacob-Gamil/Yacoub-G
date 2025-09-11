@@ -3,12 +3,13 @@ import gsap from "gsap";
 import { useRef, useState } from "react";
 import { CiMenuBurger } from "react-icons/ci";
 import { MdOutlineClose } from "react-icons/md";
+import { Link } from "react-scroll";
 
 const links = [
-  { linkName: "about", href: "#about" },
-  { linkName: "expertise", href: "#expertise" },
-  { linkName: "work", href: "#work" },
-  { linkName: "contact", href: "#about" },
+  { linkName: "home", href: "home" },
+  { linkName: "about", href: "about" },
+  { linkName: "projects", href: "projects" },
+  { linkName: "contact", href: "contact" },
 ];
 
 function MainNav() {
@@ -59,15 +60,18 @@ function MainNav() {
           className="flex flex-col justify-center font-light  gap-6 h-full"
         >
           {links.map((link, index) => (
-            <a
+            <Link
               key={index}
+              smooth={true}
+              duration={200}
+              offset={-180}
               onClick={() => setIsOpen((open) => !open)}
               className="menuLink text-white text-2xl capitalize hover:text-primary flex items-center gap-2"
-              href={link.href}
+              to={link.href}
             >
               <span className=" w-1 h-1 bg-primary block"></span>
               {link.linkName}
-            </a>
+            </Link>
           ))}
         </div>
       </div>

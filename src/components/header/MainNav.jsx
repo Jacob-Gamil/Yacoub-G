@@ -2,12 +2,13 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useRef } from "react";
 import { SlSocialGithub } from "react-icons/sl";
+import { Link } from "react-scroll";
 
 const links = [
-  { linkName: "about", href: "#about" },
-  { linkName: "expertise", href: "#expertise" },
-  { linkName: "work", href: "#work" },
-  { linkName: "contact", href: "#about" },
+  { linkName: "home", href: "home" },
+  { linkName: "about", href: "about" },
+  { linkName: "projects", href: "projects" },
+  { linkName: "contact", href: "contact" },
 ];
 
 function MainNav() {
@@ -39,16 +40,18 @@ function MainNav() {
   return (
     <div ref={linksRef} className=" flex gap-4 capitalize items-center">
       {links.map((link) => (
-        <a
+        <Link
           key={link.linkName}
-          href={link.href}
-          className={`mainLink flex items-center font-light gap-1 duration-300 opacity-90 p-2 hover:text-primary`}
+          to={link.href}
+          smooth={true}
+          duration={200}
+          offset={-180}
+          className={`mainLink flex items-center font-light gap-1 duration-300 opacity-90 p-2 hover:text-primary text-[#ccd6f6] cursor-pointer`}
         >
           <span className=" w-1 h-1 block bg-primary rounded-full"></span>
           {link.linkName}
-        </a>
+        </Link>
       ))}
-
       <a
         id="github"
         href="https://github.com/Yacoub-Gamil?tab=repositories"
@@ -56,7 +59,7 @@ function MainNav() {
         className="mainLink  opacity-80 flex flex-col items-center text-2xl justify-center"
       >
         <SlSocialGithub id="git" className=" text-primary" />
-        <span className=" w-1 h-1 bg-white block rounded-full"></span>
+        <span className=" w-1 h-1 bg-[#ccd6f6] block rounded-full"></span>
       </a>
     </div>
   );
