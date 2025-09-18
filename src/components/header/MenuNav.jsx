@@ -73,7 +73,7 @@ function MainNav() {
               className="menuLink text-white text-2xl capitalize hover:text-primary flex items-center gap-2"
               to={link.href}
             >
-              <span className=" w-1 h-1 bg-primary block"></span>
+              <span className=" w-1 h-1 bg-primary block rounded-full"></span>
               {link.linkName}
             </Link>
           ))}

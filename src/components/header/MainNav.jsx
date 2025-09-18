@@ -50,7 +50,7 @@ function MainNav() {
           hashSpy={true}
           isDynamic={true}
           activeClass="text-primary scale-[1.05]"
-          className={` flex items-center font-light gap-1 duration-150 opacity-90 p-2 hover:text-primary text-[#ccd6f6] cursor-pointer`}
+          className={`menuLink flex items-center font-light gap-1 duration-150 opacity-90 p-2 hover:text-primary text-[#ccd6f6] cursor-pointer`}
         >
           <span className=" w-1 h-1 block bg-primary rounded-full"></span>
           {link.linkName}
