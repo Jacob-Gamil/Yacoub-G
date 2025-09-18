@@ -65,6 +65,10 @@ function MainNav() {
               smooth={true}
               duration={200}
               offset={-180}
+              spy={true}
+              hashSpy={true}
+              isDynamic={true}
+              activeClass="text-primary scale-[1.05]"
               onClick={() => setIsOpen((open) => !open)}
               className="menuLink text-white text-2xl capitalize hover:text-primary flex items-center gap-2"
               to={link.href}

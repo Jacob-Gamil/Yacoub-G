@@ -5,7 +5,7 @@ import { SlSocialGithub } from "react-icons/sl";
 import { Link } from "react-scroll";
 
 const links = [
-  { linkName: "home", href: "home" },
+  { linkName: "home", href: "home", id: 0 },
   { linkName: "about", href: "about" },
   { linkName: "projects", href: "projects" },
   { linkName: "contact", href: "contact" },
@@ -46,7 +46,11 @@ function MainNav() {
           smooth={true}
           duration={200}
           offset={-180}
-          className={`mainLink flex items-center font-light gap-1 duration-300 opacity-90 p-2 hover:text-primary text-[#ccd6f6] cursor-pointer`}
+          spy={true}
+          hashSpy={true}
+          isDynamic={true}
+          activeClass="text-primary scale-[1.05]"
+          className={` flex items-center font-light gap-1 duration-150 opacity-90 p-2 hover:text-primary text-[#ccd6f6] cursor-pointer`}
         >
           <span className=" w-1 h-1 block bg-primary rounded-full"></span>
           {link.linkName}

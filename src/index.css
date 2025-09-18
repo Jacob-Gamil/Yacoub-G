@@ -3,13 +3,10 @@
 html {
   scroll-behavior: smooth;
 }
+
 body {
   background-color: #0a192f;
   color: white;
-}
-
-.name {
-  perspective: 800px;
 }
 
 @theme {
