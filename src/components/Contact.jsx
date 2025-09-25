@@ -96,7 +96,7 @@ function Contact() {
             },
             {}
           );
-          document.getElementById("myForm").reset();
+          document.getElementById("theForm").reset();
         },
         () => {
           toast.error("Email not sent!", {
