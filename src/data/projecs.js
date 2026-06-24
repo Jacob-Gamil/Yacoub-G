@@ -33,16 +33,16 @@ export const projects = [
     liveDemo: "https://the-wild-oasis-next-tau.vercel.app/",
     isReversed: false,
   },
-  {
-    projectName: "loft-egy",
-    platform: "Loft Gallery’s antiques and home decor",
-    projectImage: "/projects-images/loft-hero.png",
-    description:
-      "Developed a responsive web app for Loft Gallery with smooth navigation, cross-device compatibility, real-time data, global state management.",
-    frameworks:
-      " REACT | REACT ROUTER DOM | CONTEXT API | GSAP | SUPABASE | TAiLWiND CSS | NETLiFY",
-    gitHub: "https://github.com/Yacoub-Gamil/Loft-egy",
-    liveDemo: "https://loft-egy.netlify.app/home",
-    isReversed: true,
-  },
+  // {
+  //   projectName: "loft-egy",
+  //   platform: "Loft Gallery’s antiques and home decor",
+  //   projectImage: "/projects-images/loft-hero.png",
+  //   description:
+  //     "Developed a responsive web app for Loft Gallery with smooth navigation, cross-device compatibility, real-time data, global state management.",
+  //   frameworks:
+  //     " REACT | REACT ROUTER DOM | CONTEXT API | GSAP | SUPABASE | TAiLWiND CSS | NETLiFY",
+  //   gitHub: "https://github.com/Yacoub-Gamil/Loft-egy",
+  //   liveDemo: "https://loft-egy.netlify.app/home",
+  //   isReversed: true,
+  // },
 ];
