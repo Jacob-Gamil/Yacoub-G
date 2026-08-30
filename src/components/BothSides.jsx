@@ -7,11 +7,11 @@ import { RiLinkedinFill } from "react-icons/ri";
 
 const contacts = [
   {
-    href: "https://www.github.com/Yacoub-Gamil?tab=repositories",
+    href: "https://www.github.com/jacob-Gamil?tab=repositories",
     icon: <FiGithub />,
   },
   {
-    href: "https://www.linkedin.com/in/yacoub-gamil",
+    href: "https://www.linkedin.com/in/jacob-gamil",
     icon: <RiLinkedinFill />,
   },
   {
@@ -37,10 +37,10 @@ function BothSides() {
       <div className=" fixed bottom-0 -right-8 flex flex-col items-center gap-25">
         <div className="rotate-90  ">
           <a
-            href="mailto:yacoub-gmil@hotmail.com"
+            href="mailto:jacob-gmil@hotmail.com"
             className=" hover:text-primary cursor-pointer hover:scale-105 transition-all duration-200 block opacity-60  hover:opacity-100 "
           >
-            Yacoub-gamil@hotmail.com
+            Jacob-gamil@hotmail.com
           </a>
         </div>
         <span className=" w-[1px] h-[5rem] block bg-[#ccd6f6] opacity-60"></span>
