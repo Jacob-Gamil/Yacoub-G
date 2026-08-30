@@ -36,7 +36,7 @@ function HeroSection() {
         </p>
         <button id="aboutMe" className="heroClass w-full">
           <a
-            href="/Yacoub.pdf"
+            href="/Jacob Gamil_CV.pdf"
             target="_blank"
             className=" w-fit hover:px-3 duration-300 opacity-100 mt-10 block cursor-pointer text-primary transition-all border-b"
           >
