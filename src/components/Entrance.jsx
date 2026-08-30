@@ -77,7 +77,7 @@ function Entrance() {
       <span className="lineSix top-[2.7rem] right-[2.3rem] absolute w-[0.6rem] h-1 hidden bg-[#64ffda] -rotate-60" />
 
       <h1 className="y font-semibold font-serif absolute top-[2rem] text-9xl left-[4.1rem] text-[#64ffda]">
-        Y
+        J
       </h1>
     </div>
   );
