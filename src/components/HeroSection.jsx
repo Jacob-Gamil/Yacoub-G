@@ -22,7 +22,7 @@ function HeroSection() {
 
         <h2 className="heroClass text-[2.5rem] text-[#ccd6f6] md:text-5xl lg:text-6xl xl:text-[4rem] capitalize font-bold mt-2">
           {" "}
-          yacoub gamil
+          Jacob gamil
         </h2>
 
         <p className="heroClass text-4xl md:text-5xl xl:text-6xl font-bold text-[#8892b0]">
